@@ -1,0 +1,11 @@
+div:hover{
+border: 10px solid greenyellow;
+}
+
+body{
+    font-size: 30px;
+}
+
+div:nth-of-type(5){
+    background-color: #08A4BD;
+}
