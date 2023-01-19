@@ -22,3 +22,19 @@ h1 em, h2 em, h3 em{
 li{
     font-size: 20px;
 }
+
+li em{
+    font-weight: bolder;
+}
+
+#linguagens li:not(:nth-child(n + 4)){
+    color: blue;
+}
+
+.pink-bg{
+    background-color: pink;
+}
+
+#sites li a:hover{
+    font-weight: bolder;
+}
