@@ -1,0 +1,21 @@
+h1, p{
+    text-align: center;
+}
+
+li:hover{
+    background-color: aquamarine;
+}
+
+li:active{
+    color: rgb(174, 14, 14);
+    font-style: italic;
+}
+
+body{
+    font-size: 20px;
+}
+
+li{
+    list-style: none;
+}
+
