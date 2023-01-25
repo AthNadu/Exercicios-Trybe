@@ -1,5 +1,5 @@
-let num1 = 72;
-let num2 = 54;
+let num1;
+let num2;
 
 if (num1 > num2) {
     console.log ('Acertou, A é maior que B parabéns!!')

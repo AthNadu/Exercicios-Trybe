@@ -1,6 +1,6 @@
-const num1 = 90;
-const num2 = 52;
-const num3 = 44;
+let num1;
+let num2;
+let num3;
 
 if (num1 > num2 && num1 > num3) {
     console.log('Parabéns o número um é o maior de todos');
