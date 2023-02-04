@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo 2 DOM</title>
+    <title>Buscando elemento DOM</title>
 </head>
 <body>
+
     <main id="paiDoPai">
 
         <section id="pai">
@@ -16,12 +17,12 @@
           <section id="elementoOndeVoceEsta">
 
             <section id="primeiroFilhoDoFilho"></section>
+
             <section id="segundoEUltimoFilhoDoFilho"></section>
 
           </section>
 
           Atenção!
-
           <section id="terceiroFilho"></section>
 
           <section id="quartoEUltimoFilho"></section>
@@ -29,27 +30,26 @@
         </section>
 
     </main>
-    
+
     <script>
-        
-        const pai = document.getElementById("pai");
-        const irmaoElementoOndeEstou = document.createElement("section");
-        irmaoElementoOndeEstou.id = "irmaoElementoOndeEstou";
-        pai.appendChild(irmaoElementoOndeEstou);
-
         const elementoOndeVoceEsta = document.getElementById("elementoOndeVoceEsta");
-        const terceiroFilhoDoFilho = document.createElement("section");
-        terceiroFilhoDoFilho.id = "terceiroFilhoDoFilho";
-        elementoOndeVoceEsta.appendChild(terceiroFilhoDoFilho);
 
+        // const pai = elementoOndeVoceEsta.parentElement;
+        const pai = document.getElementById("elementoOndeVoceEsta").parentElement;
+        pai.style.color = "red";
+
+        // const primeiroFilhoDoFilho = elementoOndeVoceEsta.firstElementChild;
         const primeiroFilhoDoFilho = document.getElementById("primeiroFilhoDoFilho");
-        const primeiroFilhoDoFilhoFilho = document.createElement("section");
-        primeiroFilhoDoFilhoFilho.id = "primeiroFilhoDoFilhoFilho";
-        primeiroFilhoDoFilho.appendChild(primeiroFilhoDoFilhoFilho);
+        primeiroFilhoDoFilho.innerHTML = "Você se lembra dos vídeos da aula anterior de como fazer isso?";
 
-        const terceiroFilho = primeiroFilhoDoFilhoFilho.parentElement.parentElement.nextElementSibling;
+        // const primeiroFilho = pai.firstElementChild;
+        const primeiroFilho = elementoOndeVoceEsta.previousElementSibling;
 
-        console.log(terceiroFilho);
+        const atention = elementoOndeVoceEsta.nextSibling;
+
+        // const terceiroFilho = elementoOndeVoceEsta.nextElementSibling;
+        // const terceiroFilho2 = pai.lastElementChild.previousElementSibling;
+        const terceiroFilho = pai.children[2];
 
     </script>
 </body>
