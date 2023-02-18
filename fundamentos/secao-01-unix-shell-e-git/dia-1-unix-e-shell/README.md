@@ -1,6 +1,4 @@
-Aprendendo sobre o funcionamento do Unix e a forma de interação via linha de comando.
-
-Como o Unix funciona e como devemos interagir com ele no terminal utilizando o Shell.
+## Aprendendo sobre o funcionamento do Unix e a forma de interação via linha de comando.
 
 1. Os principais pontos abordados foram:
   - Quais são os principais componentes do Unix?
@@ -9,7 +7,9 @@ Como o Unix funciona e como devemos interagir com ele no terminal utilizando o S
   - O que é o terminal?
   - Quais são os principais comandos executados no Shell?
 
-2. Sou capaz de:
+## Como o Unix funciona e como devemos interagir com ele no terminal utilizando o Shell.
+
+2. Vou ser capaz de:
   - Executar comandos no terminal para navegar entre diretórios;
   - Executar comandos no terminal para criar e manipular arquivos e diretórios;
   - Executar comandos no terminal para realizar buscas;
