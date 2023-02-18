@@ -1,6 +1,6 @@
-Aprendendo na prática como utilizar CSS
+## Aprendendo na prática como utilizar CSS
  
-1. Sou capaz de:
+1. Vou ser capaz de:
   - Criar regras de estilo para tags HTML utilizando o CSS;
   - Utilizar os seletores de tag, id e class para aplicar regras de CSS;
   - Alterar características da fonte e das cores de páginas web;
