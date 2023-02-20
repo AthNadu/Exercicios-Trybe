@@ -76,12 +76,24 @@ console.log(divSaldo(saldoBanc, div));
 
 let clientesTrybeBank = ['Ada', 'John', 'Gus'];
 
-function addClient(nome) {
-    if (typeof nome !== 'string') {
-        return `Error, tipo inválido`;
-    } else {
+function verificaTipo(nome) {
+    let verifica = false;
+
+    if (typeof nome === 'string') {
+        verifica = true;
+    };
+
+    return verifica;
+};
+
+function addClient(nome) {   
+    let verifica = verificaTipo(nome);
+
+    if (verifica) {
        clientesTrybeBank.push(nome);
        return `Cliente adicionado(a) com sucesso`;
+    } else {
+        return `Error, tipo inválido`;
     };
 };
 
@@ -91,11 +103,13 @@ console.log(clientesTrybeBank);
 // Excluindo clientes
 
 function removeClient(nome) {
-    if (typeof nome !== 'string') {
-        return `Error, tipo inválido`;
-    } else {
+    let verifica = verificaTipo(nome);
+
+    if (verifica) {
         clientesTrybeBank.splice(clientesTrybeBank.indexOf(nome), 1);
         return `Cliente removido(a) com sucesso`;
+    } else {
+        return `Error, tipo inválido`;
     };
 
     // else if (clientesTrybeBank.includes(nome)) {
