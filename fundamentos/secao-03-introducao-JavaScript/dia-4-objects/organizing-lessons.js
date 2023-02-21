@@ -117,12 +117,12 @@ console.log(validateParameter(lesson2, 'materia', 'História'));
 
 // Function count students math lesson
 
-function countStudentsMath(object) {
+function countStudentsMath(object, materia) {
   let number = 0;
   let keys = Object.keys(object);
 
   for (let key in keys) {
-    if (object[keys[key]].materia === 'Matemática') {
+    if (object[keys[key]].materia === materia) {
       number += object[keys[key]].numeroEstudantes;
     };
   };
@@ -130,4 +130,28 @@ function countStudentsMath(object) {
   return number;
 }
 
-console.log(countStudentsMath(allLessons));
+console.log(`O número de estudantes da matéria é: ${countStudentsMath(allLessons, 'Matemática')}`);
+
+
+// Function report lesson 
+
+function reportLesson(object, name) {
+  let array = [];
+  let keys = Object.keys(object);
+  let students = 0;
+
+  for (let index = 0; index < keys.length; index += 1) {
+    if (object[keys[index]].professor === name) {
+      array.push(object[keys[index]].materia)
+      students += object[keys[index]].estudantes
+    };    
+  };
+
+  return {
+    professor: name,
+    aulas: array,
+    estudantes: students
+  };
+};
+
+console.log(reportLesson(allLessons, 'Maria Clara'));
