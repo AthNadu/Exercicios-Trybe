@@ -114,3 +114,20 @@ function validateParameter(object, keyName, valueKey) {
 // }
 
 console.log(validateParameter(lesson2, 'materia', 'História'));
+
+// Function count students math lesson
+
+function countStudentsMath(object) {
+  let number = 0;
+  let keys = Object.keys(object);
+
+  for (let key in keys) {
+    if (object[keys[key]].materia === 'Matemática') {
+      number += object[keys[key]].numeroEstudantes;
+    };
+  };
+
+  return number;
+}
+
+console.log(countStudentsMath(allLessons));
