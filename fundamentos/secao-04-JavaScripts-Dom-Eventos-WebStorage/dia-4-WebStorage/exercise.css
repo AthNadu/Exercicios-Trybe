@@ -64,3 +64,8 @@ main p {
   padding-top: 50px;
 }
 
+.hero-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
