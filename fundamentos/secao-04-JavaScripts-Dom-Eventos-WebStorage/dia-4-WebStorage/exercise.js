@@ -3,26 +3,31 @@
 const backColor = (color) => {
   const main = document.querySelector('main')
   main.style.backgroundColor = color;
+  localStorage.setItem('backgroundColor', color)
 };
 
 const fontColor = (color) => {
   const main = document.querySelector('main')
   main.style.color = color;
+  localStorage.setItem('fontColor', color)
 };
 
 const fontSize = (size) => {
   const main = document.querySelector('main')
   main.style.fontSize = size;
+  localStorage.setItem('sizeFont', size)
 };
 
 const spacementLines = (spacement) => {
   const main = document.querySelector('main')
   main.style.lineHeight = spacement;
+  localStorage.setItem('lineHeight', spacement)
 };
 
 const fontFamily = (font) => {
   const main = document.querySelector('main')
   main.style.fontFamily = font;
+  localStorage.setItem('family', font)
 };
 
 
@@ -176,3 +181,29 @@ familyBtnMedieval.addEventListener('click', (event) => {
 //     setFontFamily(event.target.innerHTML)
 //   })
 // }
+
+const initialize = () => {
+  const bgcolor = localStorage.getItem('backgroundColor')
+  if (bgcolor) {
+    backColor(bgcolor);
+  };
+  const fontcolor = localStorage.getItem('fontColor')
+  if (fontColor) {
+    fontColor(fontcolor);
+  };
+  const fontsize = localStorage.getItem('sizeFont')
+  if (fontsize) {
+    fontSize(fontsize);
+  };
+  const spacement = localStorage.getItem('lineHeight')
+  if (spacement) {
+    spacementLines(spacement);
+  };
+  const family = localStorage.getItem('family')
+  if (family) {
+    fontFamily(family);
+  };
+};
+
+
+initialize();
