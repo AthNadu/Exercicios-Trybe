@@ -1,0 +1,15 @@
+{
+  "name": "dia-4-project-unit-tests",
+  "version": "1.0.0",
+  "description": "1. Vou ser capaz de:   - Primeiros passos na direção de testes de Software;   - Testar aplicações de uma maneira mais completa e intuitiva;   - Avaliar a cobertura de testes do código.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.4.3"
+  }
+}
